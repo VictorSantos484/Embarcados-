@@ -1,0 +1,20 @@
+
+Questão1 
+
+1.O que são Sistemas Embarcados?
+ São hardware que são dedicados a uma função específicas.
+2.O que são sistemas microprocessados?
+ São microprocessadores que tem hardware adicionais,como: memória RAM,ROM,entradas,saídas,barramentos etc.
+3. Apresente aplicações de sistemas embarcados:
+(a)Para a indústria automotiva;
+ Sistema de alarme, airbag e entre outros.
+(b)Para Eletrodométicos;
+ torradeira,máquina de lavar, máquina de lavar louça etc.
+(c)Para automação industrial;
+ para construção de carros.
+4. Cite arquiteturas possíveis e as diferenças entre elas.
+Circuito integrado é formado por portas lógicas,fpga é formado por portas lógicas,barramentos,contadores etc e microcontrolador é 
+formado por processadores,ula,barramentos etc. 
+5. Por que usamos o MSP430 na disciplina,ao invés de outro muicrocontrolador?
+Usa-se MSP430 porque na forma de fazer o código é o mais profissional.
+
