@@ -1,0 +1,52 @@
+Questão2 
+
+1.Quais as diferenças entre os barramentos de dados e de endereços?
+
+barramento de dados é o caminho onde os dados pecorrem e o endereço é o local onde os dados serão lidos ou escritos.
+
+2.Quais são as diferenças entre as memórias RAM e ROM?
+
+	Se considerarmos um nível de hierarqua de uso, teriamos a memoria RAM como a primeira, porque ela é mais 
+rápida,mas como ela é volátil(se desligar o microcontrolador a memoria ram perde os dados), precisamos de uma outra para 
+armazena os dados, que é a ROM. A ROM trabalha de forma lenta,porém não perde os dados se o microcontrolador desligar.
+
+3.Considere o código abaixo:
+
+#include <stdio.h>
+int main(void)
+{
+	int i;
+	printf("Insira um número inteiro: ");
+	scanf("%d", &i);
+	if(i%2)
+		printf("%d eh impar.\n");
+	else
+		printf("%d eh par.\n");
+	return 0;
+}
+Para este código, responda: (a) A variável i é armazenada na memória RAM ou ROM? Por quê? 
+
+É armazenada na memória ram, porque utiliza a variável i para escrever e ler.
+
+(b) O programa compilado a partir deste código é armazenado na memória RAM ou ROM? Por quê?
+
+Armazenada na RAM,porque é nela que o programa não se perde, não há uma necessidade de refazer o código feito.
+
+4.Quais são as diferenças, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
+
+A arquitetura Harvard tem 2 memórias de dados diferentes e independentes em termos de barramentos de dados, já a Von Neumann é
+mais simples, tendo apenas uma memória. A harvarda tem como vantagens sobre a Von Neumann em termos de velocidade e desvantagem
+em termos de simplicidade na arquitetura. A harvard é do tipo risc e a Von Neumann do tipo cisc.
+
+5.Considere a variável inteira i, armazenando o valor 0x8051ABCD. Se i é armazenada na memória a partir do endereço 0x0200, 
+como ficam este byte e os seguintes, considerando que a memória é: 
+(a) Little-endian;
+Endereço 0x0200  0x0201 0x0202 0x203
+Valor    0xDC    0xBA   0x15   0x08
+(b) Big-endian.
+Endereço 0x0200  0x0201 0x0202 0x203
+Valor    0x80    0x51   0xAB  0xCD
+6.Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas variáveis de 32 bits?
+ A MSP 430 utiliza os 16 bits menos significativos de cada variável, somam entre elas e armazena em um carry se houver, e repetem 
+ a soma,porém com os bits mais significativos e carry. ex: i=00000001 11111111 e j=00000000 00000001. a=i+j; menos significativo de
+ "a" i+j= 11111111+ 00000001 = 00000000 + carry=1; "a" mais significativo i+j=00000001 + 00000000 + carry=1 = 00000010. 
