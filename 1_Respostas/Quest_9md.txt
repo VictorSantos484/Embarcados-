@@ -1,0 +1,28 @@
+
+1-Escreva uma função em C que faz o debounce de botões ligados à porta P1.
+
+    #include <msp430g2553.h> 
+    #define BTN BIT2         
+    #define LED1 BIT0        
+    #define LED2 BIT6         
+    #define LED_DLY 5000      
+
+  void delay( volatile unsigned long int t)
+      {
+	while(t--);
+      }
+
+  int Debounce(int porta_1)
+    {
+    if(porta_1 = 1)
+     {
+        delay(100);		
+     if(porta_1 = 1)
+        {
+          return P1IN & porta_1; 
+        }
+    else if(porta_1 = 0)
+        {
+          return P1IN &~ porta_1;
+         }
+  {
