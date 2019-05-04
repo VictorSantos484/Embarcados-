@@ -1,3 +1,3 @@
 3_Trabalho final 
 
-  Projeto: Sistema de Quantificação de Dosagem Medicamentosa. 
+  Projeto: Sistema de Monitoramento de Consumo EnergÃ©tico Via LoRa. 
