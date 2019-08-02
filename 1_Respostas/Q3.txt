@@ -1,0 +1,76 @@
+Questão3.
+
+Item 1
+
+#include <stdio.h>
+
+int main()
+  {
+   printf("ola mundo!\n"); 
+   return 0;
+ }
+
+Item 2
+
+#include <stdio.h>
+
+int main()
+
+    {
+	char nome [20];
+	printf("ola usuario\n");
+	printf("Digite o seu nome:\n");
+	scanf("%s",nome);
+	printf("%s\n",nome);
+	return 0;
+   }
+
+Item 3
+
+(a) $ ola usuario
+    $ Digite o seu nome:
+    $ eu mesmo
+    $ eu
+
+(b) $ ola usuario
+    $ Digite o seu nome:
+    $ "eu mesmo"
+    $ "eu
+
+(c) $ echo Eu mesmo | ./q2
+    $ ola usuario
+    $ Digite o seu nome:
+    $ Eu
+
+(d) $ echo Eu mesmo | ./q2
+    $ ola usuario
+    $ Digite o seu nome:
+    $ Eu
+
+(e) $ echo "Eu mesmo" | ./q2
+    $ ola usuario
+    $ Digite o seu nome:
+    $ Eu
+
+(f) $ echo Ola mundo cruel! > ola.txt
+    $ ./q2 < ola.txt
+    $ ola usuario
+    $ Digite o seu nome:
+    $ Ola
+
+Item 4
+
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+
+ {
+ char nome[20];
+ for(cont=1; cont<argc; cont++)
+   {
+     printf("%s\n", argv[cont]);
+   }
+ }
+
+Item 5
+

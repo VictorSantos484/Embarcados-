@@ -1,0 +1,178 @@
+
+Resolução Questão 4
+
+Item 1.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+        // Variável de arquivo
+   FILE *val_arq;
+
+       //vetor de memoria
+   char v[100]= "ola mundo\n";
+   
+      //abrindo o arquivo
+  val_arq = fopen("olamundo.txt", "wb");
+  if(fwrite(v, sizeof(char),100 , val_arq))
+  
+     // fechando arquivo
+  fclose(val_arq);
+ 
+    //mensagem ao usuário
+  printf("O arquivo foi  criado com sucesso!\n");
+ 
+  system("pause");
+  return(0);
+}
+
+Item 2 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[])
+
+{
+
+  int cont;
+
+  char nome[3],idade[3],string[6]="nome:",string2[7]="Idade :",barra_n[2]="\n";
+
+  FILE *val_arq;
+
+  printf("qual o seu nome: \n");
+  scanf("%s", nome);
+  printf("qual a seu idade: \n");
+  scanf("%s", idade);
+
+  for(cont=1; cont<argc; cont++){
+    printf("%s\t", argv[cont]);
+  }
+ 
+      //acessando o arquivo
+    val_arq = fopen("q2.txt", "wb");
+
+  if(fwrite(string, sizeof(char),6, val_arq))
+     if(fwrite(nome, sizeof(char),3 , val_arq))
+        if(fwrite(barra_n, sizeof(char),3 , val_arq))
+          if(fwrite(string3, sizeof(char),7 ,  al_arq))
+       if(fwrite(idade, sizeof(char),3, val_arq))
+     if(fwrite(string2, sizeof(char),5 , val_arq))
+  if(fwrite(barra_n, sizeof(char),3 , val_arq))
+  
+   // fechando arquivo
+  fclose(val_arq);
+ 
+  //mensagem ao usuário
+  printf("Arquivo criado com sucesso!\n");
+ 
+  system("pause");
+  
+  return 0;
+  }
+
+
+Item 3
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//Obs: 
+// argc: indica a quantidade de argumentos que são passados ao chamar o programa.
+// argv[]: É um vetor que contém os argumentos, um para cada string.
+
+
+int main(int argc, char *argv[])
+{
+  int cont;
+
+  char string[7] ="nome: ", string2[7]=" anos", string3[7]="Idade: ",barra_n[3]="\n";
+  FILE * val_arq;
+
+  for(cont=1; cont <argc; cont++)
+ {
+    printf("%s\t", argv[cont]);
+  }
+ 
+     //abrindo o arquivo
+  val_arq = fopen("q3.txt", "wb");
+  
+     // if(fwrite(v, sizeof(char),100 , val_arq) != 100)
+  if(fwrite(string, sizeof(char),7, val_arq))
+     if(fwrite(argv[1], sizeof(char),3 , val_arq))
+      if(fwrite(barra_n, sizeof(char),3 , val_arq))
+         if(fwrite(string3, sizeof(char),7 , val_arq))
+      if(fwrite(argv[2], sizeof(char),3, val_arq))
+     if(fwrite(string2, sizeof(char),5 , val_arq))
+  if(fwrite(barra_n, sizeof(char),3 , val_arq))
+  
+     // fechando arquivo
+  fclose(val_arq);
+ 
+  //mensagem para o usuário
+  printf("O arquivo foi  criado com sucesso!\n");
+ 
+  system("pause");
+  
+   // printf("\nNumero de entrada= %d\n", argc-1);
+  return 0;
+  }
+
+
+Item 4 Verificar antes de adicionar no github.
+
+#include <stdio.h>
+#include "bib_arqs.h"
+
+
+//int tam_arq_texto(char *nome_arquivo);
+ 
+int main() 
+{
+       // nome do arquivo
+    char nome_arquivo[100]; 
+      // ponteiro para o arquivo
+    FILE *arquivo; 
+    int tamanho; // tamanho em bytes do arquivo
+     
+    printf("Digite o nome do arquivo: ");
+    scanf("%s", nome_arquivo);
+    tamanho=tam_arq_texto(nome_arquivo);
+     // imprime o tamanho do arquivo
+      printf("O arquivo %s possui %d bytes\n", nome_arquivo, tamanho);
+ 
+    return 0;
+ 
+}
+
+/*int tam_arq_texto(char *nome_arquivo) //usa-se char* quando não sabe o tamanho.
+{
+	
+    FILE *arquivo; // ponteiro para o arquivo
+    long tamanho; // tamanho em bytes do arquivo
+	 // abre o arquivo para leitura
+    arquivo = fopen(nome_arquivo, "r");
+ 
+    // verifica se o arquivo foi aberto com sucesso
+    if (arquivo != NULL) {
+        // movimenta a posição corrente de leitura no arquivo 
+        // para o seu fim
+        fseek(arquivo, 0, SEEK_END);
+ 
+        // pega a posição corrente de leitura no arquivo
+        tamanho = ftell(arquivo);     
+     
+    } else {
+        printf("Arquivo inexistente");
+    }
+    return tamanho;
+}*/
+
+
+
+
